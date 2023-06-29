@@ -21,7 +21,7 @@ public class LoanController {
     }
 
  @GetMapping(path = "/loans")
-    public ResponseEntity<InterestRate> getLoansByType(@RequestParam("type") String type,@RequestParam("msg") String msg) {
+    public ResponseEntity<InterestRate> getLoansByType1(@RequestParam("type") String type,@RequestParam("msg") String msg) {
         return ResponseEntity.ok().body(loanService.getAllLoansByType(type.toUpperCase()));
     }
 
