@@ -14,7 +14,7 @@ public class LoanController {
 
     @Autowired
     private LoanService loanService;
-
+        Sysout.out.println("hi, hello");
     @GetMapping(path = "/loans")
     public ResponseEntity<InterestRate> getLoansByType(@RequestParam("type") String type) {
         return ResponseEntity.ok().body(loanService.getAllLoansByType(type.toUpperCase()));
