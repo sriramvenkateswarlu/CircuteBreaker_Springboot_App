@@ -16,16 +16,12 @@ public class LoanController {
     private LoanService loanService;
  
 
-        Sysout.out.println("hi, hello");
-
+     
     @GetMapping(path = "/loans")
     public ResponseEntity<InterestRate> getLoansByType(@RequestParam("type") String type) {
         return ResponseEntity.ok().body(loanService.getAllLoansByType(type.toUpperCase()));
     }
 
- @GetMapping(path = "/loans")
-    public ResponseEntity<InterestRate> getLoansByType1(@RequestParam("type") String type,@RequestParam("msg") String msg) {
-        return ResponseEntity.ok().body(loanService.getAllLoansByType(type.toUpperCase()));
-    }
+ 
 
 }
